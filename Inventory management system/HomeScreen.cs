@@ -22,5 +22,11 @@ namespace Inventory_management_system
         {
             // Your code for HomeScreen load event
         }
+
+        private void Userbtn_Click(object sender, EventArgs e)
+        {
+            Users u = new Users();  
+            MainClass.showWindow(u, this, MDI.ActiveForm);
+        }
     }
 }

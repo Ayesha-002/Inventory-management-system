@@ -22,11 +22,37 @@ namespace Inventory_management_system
 
         }
 
-        protected void bckbtn_Click(object sender, EventArgs e)
-        {  
+        private void Bckbtn_Click(object sender, EventArgs e)
+        {
             HomeScreen obj = new HomeScreen();
             MainClass.showWindow(obj, this, MDI.ActiveForm);
+        }
+
+        public virtual void Addbtn_Click(object sender, EventArgs e)
+        {
 
         }
-    }
+
+        public virtual void Editbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void Savebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void Deletebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void Searchtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }   
+
+       
 }

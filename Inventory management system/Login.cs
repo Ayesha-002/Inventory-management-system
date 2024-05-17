@@ -16,5 +16,11 @@ namespace Inventory_management_system
         {
             InitializeComponent();
         }
+
+        private void Loginbtn_Click(object sender, EventArgs e)
+        {
+            HomeScreen obj = new HomeScreen();
+            MainClass.showWindow(obj, this, MDI.ActiveForm);
+        }
     }
 }

@@ -37,8 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Searchtxt = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Backbtn = new System.Windows.Forms.Button();
-            this.bckbtn = new System.Windows.Forms.Button();
+            this.Bckbtn = new System.Windows.Forms.Button();
             this.LeftPanel.SuspendLayout();
             this.RightPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,16 +58,13 @@
             this.RightPanel.Controls.Add(this.panel3);
             this.RightPanel.Location = new System.Drawing.Point(257, 0);
             this.RightPanel.Size = new System.Drawing.Size(1033, 613);
-//            this.RightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RightPanel_Paint);
             this.RightPanel.Controls.SetChildIndex(this.panel3, 0);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bckbtn);
-            this.panel2.Controls.Add(this.Backbtn);
+            this.panel2.Controls.Add(this.Bckbtn);
             this.panel2.Size = new System.Drawing.Size(257, 58);
-            this.panel2.Controls.SetChildIndex(this.Backbtn, 0);
-            this.panel2.Controls.SetChildIndex(this.bckbtn, 0);
+            this.panel2.Controls.SetChildIndex(this.Bckbtn, 0);
             // 
             // panel3
             // 
@@ -103,6 +99,7 @@
             // 
             // Deletebtn
             // 
+            this.Deletebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Deletebtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Deletebtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Deletebtn.FlatAppearance.BorderSize = 3;
@@ -114,9 +111,11 @@
             this.Deletebtn.TabIndex = 3;
             this.Deletebtn.Text = "DELETE";
             this.Deletebtn.UseVisualStyleBackColor = true;
+            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
             // 
             // Savebtn
             // 
+            this.Savebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Savebtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Savebtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Savebtn.FlatAppearance.BorderSize = 3;
@@ -128,9 +127,11 @@
             this.Savebtn.TabIndex = 2;
             this.Savebtn.Text = "SAVE";
             this.Savebtn.UseVisualStyleBackColor = true;
+            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
             // Editbtn
             // 
+            this.Editbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Editbtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Editbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Editbtn.FlatAppearance.BorderSize = 3;
@@ -142,9 +143,11 @@
             this.Editbtn.TabIndex = 1;
             this.Editbtn.Text = "EDIT";
             this.Editbtn.UseVisualStyleBackColor = true;
+            this.Editbtn.Click += new System.EventHandler(this.Editbtn_Click);
             // 
             // Addbtn
             // 
+            this.Addbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Addbtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Addbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Addbtn.FlatAppearance.BorderSize = 3;
@@ -156,6 +159,7 @@
             this.Addbtn.TabIndex = 0;
             this.Addbtn.Text = "ADD";
             this.Addbtn.UseVisualStyleBackColor = true;
+            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
             // groupBox1
             // 
@@ -176,6 +180,7 @@
             this.Searchtxt.Name = "Searchtxt";
             this.Searchtxt.Size = new System.Drawing.Size(333, 26);
             this.Searchtxt.TabIndex = 0;
+            this.Searchtxt.TextChanged += new System.EventHandler(this.Searchtxt_TextChanged);
             // 
             // panel4
             // 
@@ -185,26 +190,21 @@
             this.panel4.Size = new System.Drawing.Size(257, 50);
             this.panel4.TabIndex = 2;
             // 
-            // Backbtn
+            // Bckbtn
             // 
-            this.Backbtn.FlatAppearance.BorderSize = 0;
-            this.Backbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Backbtn.Location = new System.Drawing.Point(3, 29);
-            this.Backbtn.Name = "Backbtn";
-            this.Backbtn.Size = new System.Drawing.Size(57, 23);
-            this.Backbtn.TabIndex = 3;
-            this.Backbtn.UseVisualStyleBackColor = true;
-            // 
-            // bckbtn
-            // 
-            this.bckbtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bckbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bckbtn.Location = new System.Drawing.Point(0, 0);
-            this.bckbtn.Name = "bckbtn";
-            this.bckbtn.Size = new System.Drawing.Size(68, 58);
-            this.bckbtn.TabIndex = 4;
-            this.bckbtn.UseVisualStyleBackColor = true;
-            this.bckbtn.Click += new System.EventHandler(this.bckbtn_Click);
+            this.Bckbtn.BackColor = System.Drawing.Color.DimGray;
+            this.Bckbtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Bckbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Bckbtn.FlatAppearance.BorderSize = 2;
+            this.Bckbtn.Font = new System.Drawing.Font("Sitka Text", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bckbtn.ForeColor = System.Drawing.Color.Black;
+            this.Bckbtn.Location = new System.Drawing.Point(0, 0);
+            this.Bckbtn.Name = "Bckbtn";
+            this.Bckbtn.Size = new System.Drawing.Size(70, 58);
+            this.Bckbtn.TabIndex = 3;
+            this.Bckbtn.Text = "BACK";
+            this.Bckbtn.UseVisualStyleBackColor = false;
+            this.Bckbtn.Click += new System.EventHandler(this.Bckbtn_Click);
             // 
             // Sample2
             // 
@@ -236,7 +236,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox Searchtxt;
-        private System.Windows.Forms.Button Backbtn;
-        private System.Windows.Forms.Button bckbtn;
+        private System.Windows.Forms.Button Bckbtn;
     }
 }

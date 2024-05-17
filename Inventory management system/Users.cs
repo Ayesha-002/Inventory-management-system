@@ -19,6 +19,30 @@ namespace Inventory_management_system
 
         private void Users_Load(object sender, EventArgs e)
         {
+            MainClass.disable(LeftPanel);
+        }
+        public override void Addbtn_Click(object sender, EventArgs e)
+        {
+            MainClass.enable_reset(LeftPanel);
+        }
+
+        public override void Editbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public override void Savebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public override void Deletebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public override void Searchtxt_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

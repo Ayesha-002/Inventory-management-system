@@ -32,23 +32,28 @@
             this.passtxt = new System.Windows.Forms.TextBox();
             this.lable3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Loginbtn = new System.Windows.Forms.Button();
             this.LeftPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftPanel
             // 
-            this.LeftPanel.Controls.Add(this.button1);
+            this.LeftPanel.Controls.Add(this.Loginbtn);
             this.LeftPanel.Controls.Add(this.label4);
             this.LeftPanel.Controls.Add(this.lable3);
             this.LeftPanel.Controls.Add(this.passtxt);
             this.LeftPanel.Controls.Add(this.usernametxt);
             this.LeftPanel.Size = new System.Drawing.Size(278, 642);
+            this.LeftPanel.Controls.SetChildIndex(this.panel2, 0);
             this.LeftPanel.Controls.SetChildIndex(this.usernametxt, 0);
             this.LeftPanel.Controls.SetChildIndex(this.passtxt, 0);
             this.LeftPanel.Controls.SetChildIndex(this.lable3, 0);
             this.LeftPanel.Controls.SetChildIndex(this.label4, 0);
-            this.LeftPanel.Controls.SetChildIndex(this.button1, 0);
+            this.LeftPanel.Controls.SetChildIndex(this.Loginbtn, 0);
+            // 
+            // RightPanel
+            // 
+            this.RightPanel.Size = new System.Drawing.Size(1139, 642);
             // 
             // usernametxt
             // 
@@ -87,16 +92,17 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Password";
             // 
-            // button1
+            // Loginbtn
             // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(29, 425);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 33);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Loginbtn.FlatAppearance.BorderSize = 2;
+            this.Loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Loginbtn.Location = new System.Drawing.Point(29, 425);
+            this.Loginbtn.Name = "Loginbtn";
+            this.Loginbtn.Size = new System.Drawing.Size(205, 33);
+            this.Loginbtn.TabIndex = 6;
+            this.Loginbtn.Text = "LOGIN";
+            this.Loginbtn.UseVisualStyleBackColor = true;
+            this.Loginbtn.Click += new System.EventHandler(this.Loginbtn_Click);
             // 
             // Login
             // 
@@ -117,6 +123,6 @@
         private System.Windows.Forms.Label lable3;
         private System.Windows.Forms.TextBox passtxt;
         private System.Windows.Forms.TextBox usernametxt;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Loginbtn;
     }
 }
