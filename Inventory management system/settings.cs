@@ -31,7 +31,7 @@ namespace Inventory_management_system
             {
                 if (ServerTxt.Text != "" && databaseTxt.Text != "")
                 {
-                    s = "Data Source" + ServerTxt.Text + ";Initial Catalog = " + databaseTxt.Text + ";Integrated Security = true;";
+                    s = "Data Source = " + ServerTxt.Text + ";Initial Catalog = " + databaseTxt.Text + ";Integrated Security = true;";
                     File.WriteAllText(path + "\\connect", s);
                     DialogResult dr = MessageBox.Show("Settings Saved Succesfully . . .", "Information . . .", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dr == DialogResult.OK)
@@ -51,7 +51,7 @@ namespace Inventory_management_system
             {
                 if (ServerTxt.Text != "" && databaseTxt.Text != "" && UserTxt.Text != "" && PassTxt.Text != "")
                 {
-                    s = "Data Source" + ServerTxt.Text + ";Initial Catalog = " + databaseTxt.Text + ";User ID =" + UserTxt.Text + ";Password=" + PassTxt.Text + ";";
+                    s = "Data Source = " + ServerTxt.Text + ";Initial Catalog = " + databaseTxt.Text + ";User ID =" + UserTxt.Text + ";Password=" + PassTxt.Text + ";";
                     File.WriteAllText(path + "\\connect", s);
                     DialogResult dr = MessageBox.Show("Settings Saved Succesfully . . .", "Information . . .", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dr == DialogResult.OK)

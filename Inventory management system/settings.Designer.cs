@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.DatabaseTxtLable = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ServerTxt = new System.Windows.Forms.TextBox();
@@ -51,11 +51,12 @@
             this.LeftPanel.Controls.Add(this.ServerTxt);
             this.LeftPanel.Controls.Add(this.label6);
             this.LeftPanel.Controls.Add(this.label5);
-            this.LeftPanel.Controls.Add(this.label4);
+            this.LeftPanel.Controls.Add(this.DatabaseTxtLable);
             this.LeftPanel.Controls.Add(this.label3);
             this.LeftPanel.Size = new System.Drawing.Size(278, 591);
+            this.LeftPanel.Controls.SetChildIndex(this.panel2, 0);
             this.LeftPanel.Controls.SetChildIndex(this.label3, 0);
-            this.LeftPanel.Controls.SetChildIndex(this.label4, 0);
+            this.LeftPanel.Controls.SetChildIndex(this.DatabaseTxtLable, 0);
             this.LeftPanel.Controls.SetChildIndex(this.label5, 0);
             this.LeftPanel.Controls.SetChildIndex(this.label6, 0);
             this.LeftPanel.Controls.SetChildIndex(this.ServerTxt, 0);
@@ -64,6 +65,10 @@
             this.LeftPanel.Controls.SetChildIndex(this.UserTxt, 0);
             this.LeftPanel.Controls.SetChildIndex(this.isCB, 0);
             this.LeftPanel.Controls.SetChildIndex(this.saveBtn, 0);
+            // 
+            // RightPanel
+            // 
+            this.RightPanel.Size = new System.Drawing.Size(622, 591);
             // 
             // label3
             // 
@@ -74,14 +79,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Server";
             // 
-            // label4
+            // DatabaseTxtLable
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 288);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Database";
+            this.DatabaseTxtLable.AutoSize = true;
+            this.DatabaseTxtLable.Location = new System.Drawing.Point(12, 288);
+            this.DatabaseTxtLable.Name = "DatabaseTxtLable";
+            this.DatabaseTxtLable.Size = new System.Drawing.Size(75, 21);
+            this.DatabaseTxtLable.TabIndex = 3;
+            this.DatabaseTxtLable.Text = "Database";
             // 
             // label5
             // 
@@ -180,7 +185,7 @@
         private System.Windows.Forms.TextBox ServerTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label DatabaseTxtLable;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.CheckBox isCB;

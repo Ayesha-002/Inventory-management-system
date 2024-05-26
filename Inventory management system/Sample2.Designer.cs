@@ -36,7 +36,6 @@
             this.Addbtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Searchtxt = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.Bckbtn = new System.Windows.Forms.Button();
             this.LeftPanel.SuspendLayout();
             this.RightPanel.SuspendLayout();
@@ -48,10 +47,7 @@
             // 
             // LeftPanel
             // 
-            this.LeftPanel.Controls.Add(this.panel4);
             this.LeftPanel.Size = new System.Drawing.Size(257, 613);
-            this.LeftPanel.Controls.SetChildIndex(this.panel2, 0);
-            this.LeftPanel.Controls.SetChildIndex(this.panel4, 0);
             // 
             // RightPanel
             // 
@@ -182,14 +178,6 @@
             this.Searchtxt.TabIndex = 0;
             this.Searchtxt.TextChanged += new System.EventHandler(this.Searchtxt_TextChanged);
             // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 58);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(257, 50);
-            this.panel4.TabIndex = 2;
-            // 
             // Bckbtn
             // 
             this.Bckbtn.BackColor = System.Drawing.Color.DimGray;
@@ -201,7 +189,7 @@
             this.Bckbtn.Location = new System.Drawing.Point(0, 0);
             this.Bckbtn.Name = "Bckbtn";
             this.Bckbtn.Size = new System.Drawing.Size(70, 58);
-            this.Bckbtn.TabIndex = 3;
+            this.Bckbtn.TabIndex = 0;
             this.Bckbtn.Text = "BACK";
             this.Bckbtn.UseVisualStyleBackColor = false;
             this.Bckbtn.Click += new System.EventHandler(this.Bckbtn_Click);
@@ -234,7 +222,6 @@
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button Editbtn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox Searchtxt;
         private System.Windows.Forms.Button Bckbtn;
     }
