@@ -28,5 +28,17 @@ namespace Inventory_management_system
             Users u = new Users();  
             MainClass.showWindow(u, this, MDI.ActiveForm);
         }
+
+        private void catBtn_Click(object sender, EventArgs e)
+        {
+            Category u = new Category();
+            MainClass.showWindow(u, this, MDI.ActiveForm);
+        }
+
+        private void ProBtn_Click(object sender, EventArgs e)
+        {
+            products u = new products();
+            MainClass.showWindow(u, this, MDI.ActiveForm);
+        }
     }
 }

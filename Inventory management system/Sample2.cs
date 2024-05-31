@@ -52,6 +52,11 @@ namespace Inventory_management_system
         {
 
         }
+
+        public virtual void Viewbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }   
 
        

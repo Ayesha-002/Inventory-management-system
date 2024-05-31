@@ -10,7 +10,7 @@ namespace Inventory_management_system
 {
     internal class Insertion
     {
-        public void insertUser(string name, string username, string password, string phone, string email)
+        public void insertUser(string name, string username, string password, string phone, string email, Int16 status)
         {
             try
             {
@@ -21,6 +21,7 @@ namespace Inventory_management_system
                 cmd.Parameters.AddWithValue("@password",password);
                 cmd.Parameters.AddWithValue("@phone ",phone);
                 cmd.Parameters.AddWithValue("@email ",email);
+                cmd.Parameters.AddWithValue("@status ",status);
                 MainClass.con.Open();
                 cmd.ExecuteNonQuery();
                 MainClass.con.Close();
@@ -33,5 +34,24 @@ namespace Inventory_management_system
             }
         }
 
+        public void insertCat(string name, Int16 status)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("st_insertCategory", MainClass.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@isAcitve", status);
+                MainClass.con.Open();
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+                MainClass.ShowMSG(name + "Added to the system successfully", "Success.....", "Success");
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MainClass.ShowMSG(ex.Message, "Error.....", "Error");
+            }
+        }
     }
 }

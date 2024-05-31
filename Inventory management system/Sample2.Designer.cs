@@ -37,6 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Searchtxt = new System.Windows.Forms.TextBox();
             this.Bckbtn = new System.Windows.Forms.Button();
+            this.Viewbtn = new System.Windows.Forms.Button();
             this.LeftPanel.SuspendLayout();
             this.RightPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -47,13 +48,13 @@
             // 
             // LeftPanel
             // 
-            this.LeftPanel.Size = new System.Drawing.Size(257, 613);
+            this.LeftPanel.Size = new System.Drawing.Size(257, 649);
             // 
             // RightPanel
             // 
             this.RightPanel.Controls.Add(this.panel3);
             this.RightPanel.Location = new System.Drawing.Point(257, 0);
-            this.RightPanel.Size = new System.Drawing.Size(1033, 613);
+            this.RightPanel.Size = new System.Drawing.Size(1172, 649);
             this.RightPanel.Controls.SetChildIndex(this.panel3, 0);
             // 
             // panel2
@@ -68,7 +69,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 58);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1033, 50);
+            this.panel3.Size = new System.Drawing.Size(1172, 50);
             this.panel3.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -84,13 +85,15 @@
             this.tableLayoutPanel1.Controls.Add(this.Savebtn, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.Editbtn, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Addbtn, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Viewbtn, 4, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1033, 50);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1172, 50);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // Deletebtn
@@ -101,9 +104,9 @@
             this.Deletebtn.FlatAppearance.BorderSize = 3;
             this.Deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Deletebtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Deletebtn.Location = new System.Drawing.Point(519, 3);
+            this.Deletebtn.Location = new System.Drawing.Point(588, 3);
             this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(166, 44);
+            this.Deletebtn.Size = new System.Drawing.Size(189, 44);
             this.Deletebtn.TabIndex = 3;
             this.Deletebtn.Text = "DELETE";
             this.Deletebtn.UseVisualStyleBackColor = true;
@@ -117,9 +120,9 @@
             this.Savebtn.FlatAppearance.BorderSize = 3;
             this.Savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Savebtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Savebtn.Location = new System.Drawing.Point(347, 3);
+            this.Savebtn.Location = new System.Drawing.Point(393, 3);
             this.Savebtn.Name = "Savebtn";
-            this.Savebtn.Size = new System.Drawing.Size(166, 44);
+            this.Savebtn.Size = new System.Drawing.Size(189, 44);
             this.Savebtn.TabIndex = 2;
             this.Savebtn.Text = "SAVE";
             this.Savebtn.UseVisualStyleBackColor = true;
@@ -133,9 +136,9 @@
             this.Editbtn.FlatAppearance.BorderSize = 3;
             this.Editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Editbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Editbtn.Location = new System.Drawing.Point(175, 3);
+            this.Editbtn.Location = new System.Drawing.Point(198, 3);
             this.Editbtn.Name = "Editbtn";
-            this.Editbtn.Size = new System.Drawing.Size(166, 44);
+            this.Editbtn.Size = new System.Drawing.Size(189, 44);
             this.Editbtn.TabIndex = 1;
             this.Editbtn.Text = "EDIT";
             this.Editbtn.UseVisualStyleBackColor = true;
@@ -151,7 +154,7 @@
             this.Addbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Addbtn.Location = new System.Drawing.Point(3, 3);
             this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(166, 44);
+            this.Addbtn.Size = new System.Drawing.Size(189, 44);
             this.Addbtn.TabIndex = 0;
             this.Addbtn.Text = "ADD";
             this.Addbtn.UseVisualStyleBackColor = true;
@@ -159,11 +162,11 @@
             // 
             // groupBox1
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 2);
             this.groupBox1.Controls.Add(this.Searchtxt);
-            this.groupBox1.Location = new System.Drawing.Point(691, 3);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(978, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(339, 44);
+            this.groupBox1.Size = new System.Drawing.Size(191, 44);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SEARCH";
@@ -174,7 +177,7 @@
             this.Searchtxt.Location = new System.Drawing.Point(3, 22);
             this.Searchtxt.MaxLength = 100;
             this.Searchtxt.Name = "Searchtxt";
-            this.Searchtxt.Size = new System.Drawing.Size(333, 26);
+            this.Searchtxt.Size = new System.Drawing.Size(185, 26);
             this.Searchtxt.TabIndex = 0;
             this.Searchtxt.TextChanged += new System.EventHandler(this.Searchtxt_TextChanged);
             // 
@@ -194,11 +197,25 @@
             this.Bckbtn.UseVisualStyleBackColor = false;
             this.Bckbtn.Click += new System.EventHandler(this.Bckbtn_Click);
             // 
+            // Viewbtn
+            // 
+            this.Viewbtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Viewbtn.FlatAppearance.BorderSize = 3;
+            this.Viewbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Viewbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Viewbtn.Location = new System.Drawing.Point(783, 3);
+            this.Viewbtn.Name = "Viewbtn";
+            this.Viewbtn.Size = new System.Drawing.Size(189, 44);
+            this.Viewbtn.TabIndex = 5;
+            this.Viewbtn.Text = "VIEW";
+            this.Viewbtn.UseVisualStyleBackColor = true;
+            this.Viewbtn.Click += new System.EventHandler(this.Viewbtn_Click);
+            // 
             // Sample2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 613);
+            this.ClientSize = new System.Drawing.Size(1429, 649);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Sample2";
             this.Load += new System.EventHandler(this.Sample2_Load);
@@ -222,7 +239,8 @@
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button Editbtn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox Searchtxt;
+        protected System.Windows.Forms.TextBox Searchtxt;
         private System.Windows.Forms.Button Bckbtn;
+        private System.Windows.Forms.Button Viewbtn;
     }
 }
