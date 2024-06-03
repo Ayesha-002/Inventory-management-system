@@ -74,6 +74,15 @@ namespace Inventory_management_system
                     if (dr == DialogResult.Yes)
                     {
                         Updation u = new Updation();
+                        if (ActiveDropDown.SelectedIndex == 0)
+                        {
+                            stat = 1;
+                        }
+                        else if (ActiveDropDown.SelectedIndex == 1)
+                        {
+                            stat = 0;
+                        }
+
                         u.UpdateCat(catID,CategoryTxt.Text,stat);
                         r.showCategories(dataGridView1, catIDGV, NameGV, StatusGV);
                         MainClass.disable_reset(LeftPanel);

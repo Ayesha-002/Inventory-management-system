@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Inventory_management_system
 {
@@ -24,7 +25,7 @@ namespace Inventory_management_system
         Retrieval r = new Retrieval();
         private void Users_Load(object sender, EventArgs e)
         {
-            MainClass.disable(LeftPanel);
+            MainClass.disable_reset(LeftPanel);
             
         }
         public override void Addbtn_Click(object sender, EventArgs e)
@@ -79,8 +80,18 @@ namespace Inventory_management_system
                     DialogResult dr = MessageBox.Show("Are you sure  , you want to update record?", "Question...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if(dr == DialogResult.Yes)
                     {
-                    Updation u = new Updation();
-                    u.updateUser(UserID,Nametxt.Text, Usernametxt.Text, Passtxt.Text, Phonetxt.Text, Emailtxt.Text, stat);
+                        Updation u = new Updation();
+
+                        if (StatusDropDown.SelectedIndex == 0)
+                        {
+                            stat = 1;
+                        }
+                        else if (StatusDropDown.SelectedIndex == 1)
+                        {
+                            stat = 0;
+                        }
+
+                        u.updateUser(UserID,Nametxt.Text, Usernametxt.Text, Passtxt.Text, Phonetxt.Text, Emailtxt.Text, stat);
                     r.showUsers(dataGridView1, userIDGV, NameGV, UsernameGV, PassGV, PhoneGV, EmailGV, StatusGV);
                         MainClass.disable_reset(LeftPanel);
                     }

@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.ProductTxt = new System.Windows.Forms.TextBox();
             this.ProErrorLabel = new System.Windows.Forms.Label();
@@ -43,7 +47,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.CategoryDropDown = new System.Windows.Forms.ComboBox();
             this.CategoryErrorLable = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.proIDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barcodeGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expiryGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catIDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.catGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LeftPanel.SuspendLayout();
+            this.RightPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Searchtxt
@@ -87,8 +101,10 @@
             // 
             // RightPanel
             // 
+            this.RightPanel.Controls.Add(this.dataGridView1);
             this.RightPanel.Size = new System.Drawing.Size(940, 509);
             this.RightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RightPanel_Paint);
+            this.RightPanel.Controls.SetChildIndex(this.dataGridView1, 0);
             // 
             // label3
             // 
@@ -233,6 +249,111 @@
             this.CategoryErrorLable.Text = "*";
             this.CategoryErrorLable.Visible = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.proIDGV,
+            this.proGV,
+            this.barcodeGV,
+            this.expiryGV,
+            this.priceGV,
+            this.catIDGV,
+            this.catGV});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 108);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(940, 401);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // proIDGV
+            // 
+            this.proIDGV.HeaderText = "proID";
+            this.proIDGV.MinimumWidth = 6;
+            this.proIDGV.Name = "proIDGV";
+            this.proIDGV.ReadOnly = true;
+            this.proIDGV.Visible = false;
+            // 
+            // proGV
+            // 
+            this.proGV.HeaderText = "Product";
+            this.proGV.MinimumWidth = 6;
+            this.proGV.Name = "proGV";
+            this.proGV.ReadOnly = true;
+            // 
+            // barcodeGV
+            // 
+            this.barcodeGV.HeaderText = "Barcode";
+            this.barcodeGV.MinimumWidth = 6;
+            this.barcodeGV.Name = "barcodeGV";
+            this.barcodeGV.ReadOnly = true;
+            // 
+            // expiryGV
+            // 
+            this.expiryGV.HeaderText = "Expiry Date";
+            this.expiryGV.MinimumWidth = 6;
+            this.expiryGV.Name = "expiryGV";
+            this.expiryGV.ReadOnly = true;
+            // 
+            // priceGV
+            // 
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.priceGV.DefaultCellStyle = dataGridViewCellStyle2;
+            this.priceGV.HeaderText = "Price";
+            this.priceGV.MinimumWidth = 6;
+            this.priceGV.Name = "priceGV";
+            this.priceGV.ReadOnly = true;
+            // 
+            // catIDGV
+            // 
+            this.catIDGV.HeaderText = "catID";
+            this.catIDGV.MinimumWidth = 6;
+            this.catIDGV.Name = "catIDGV";
+            this.catIDGV.ReadOnly = true;
+            this.catIDGV.Visible = false;
+            // 
+            // catGV
+            // 
+            this.catGV.HeaderText = "Category";
+            this.catGV.MinimumWidth = 6;
+            this.catGV.Name = "catGV";
+            this.catGV.ReadOnly = true;
+            // 
             // products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -243,6 +364,8 @@
             this.Load += new System.EventHandler(this.products_Load);
             this.LeftPanel.ResumeLayout(false);
             this.LeftPanel.PerformLayout();
+            this.RightPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,5 +387,13 @@
         private System.Windows.Forms.ComboBox CategoryDropDown;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label CategoryErrorLable;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proIDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barcodeGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expiryGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn catIDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn catGV;
     }
 }

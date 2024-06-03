@@ -71,6 +71,12 @@ namespace Inventory_management_system
                     chk.Enabled = false;
                     chk.Checked = false;
                 }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dtp = (DateTimePicker)c;
+                    dtp.Enabled = false;
+                    dtp.Value = DateTime.Now;
+                }
             }
         }
 
@@ -101,6 +107,11 @@ namespace Inventory_management_system
                     CheckBox chk = (CheckBox)c;
                     chk.Enabled = false;
                     
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dtp = (DateTimePicker)c;
+                    dtp.Enabled = false;
                 }
             }
         }
@@ -133,6 +144,12 @@ namespace Inventory_management_system
                     chk.Enabled = true;
                     chk.Checked = false;
                 }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dtp = (DateTimePicker)c;
+                    dtp.Enabled = true;
+                    dtp.Value = DateTime.Now;
+                }
             }
         }
 
@@ -163,6 +180,11 @@ namespace Inventory_management_system
                     CheckBox chk = (CheckBox)c;
                     chk.Enabled = true;
                     
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dtp = (DateTimePicker)c;
+                    dtp.Enabled = true;
                 }
             }
         }

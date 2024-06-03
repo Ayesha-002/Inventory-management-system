@@ -33,6 +33,8 @@
             this.lable3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Loginbtn = new System.Windows.Forms.Button();
+            this.usernameErrorLabel = new System.Windows.Forms.Label();
+            this.PassErrorLable = new System.Windows.Forms.Label();
             this.LeftPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,13 +45,17 @@
             this.LeftPanel.Controls.Add(this.lable3);
             this.LeftPanel.Controls.Add(this.passtxt);
             this.LeftPanel.Controls.Add(this.usernametxt);
+            this.LeftPanel.Controls.Add(this.PassErrorLable);
+            this.LeftPanel.Controls.Add(this.usernameErrorLabel);
             this.LeftPanel.Size = new System.Drawing.Size(278, 642);
-            this.LeftPanel.Controls.SetChildIndex(this.panel2, 0);
+            this.LeftPanel.Controls.SetChildIndex(this.usernameErrorLabel, 0);
+            this.LeftPanel.Controls.SetChildIndex(this.PassErrorLable, 0);
             this.LeftPanel.Controls.SetChildIndex(this.usernametxt, 0);
             this.LeftPanel.Controls.SetChildIndex(this.passtxt, 0);
             this.LeftPanel.Controls.SetChildIndex(this.lable3, 0);
             this.LeftPanel.Controls.SetChildIndex(this.label4, 0);
             this.LeftPanel.Controls.SetChildIndex(this.Loginbtn, 0);
+            this.LeftPanel.Controls.SetChildIndex(this.panel2, 0);
             // 
             // RightPanel
             // 
@@ -62,6 +68,7 @@
             this.usernametxt.Name = "usernametxt";
             this.usernametxt.Size = new System.Drawing.Size(241, 26);
             this.usernametxt.TabIndex = 2;
+            this.usernametxt.TextChanged += new System.EventHandler(this.usernametxt_TextChanged);
             // 
             // passtxt
             // 
@@ -71,6 +78,7 @@
             this.passtxt.Size = new System.Drawing.Size(241, 26);
             this.passtxt.TabIndex = 3;
             this.passtxt.UseSystemPasswordChar = true;
+            this.passtxt.TextChanged += new System.EventHandler(this.passtxt_TextChanged);
             // 
             // lable3
             // 
@@ -104,8 +112,33 @@
             this.Loginbtn.UseVisualStyleBackColor = true;
             this.Loginbtn.Click += new System.EventHandler(this.Loginbtn_Click);
             // 
+            // usernameErrorLabel
+            // 
+            this.usernameErrorLabel.AutoSize = true;
+            this.usernameErrorLabel.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameErrorLabel.ForeColor = System.Drawing.Color.Tomato;
+            this.usernameErrorLabel.Location = new System.Drawing.Point(229, 301);
+            this.usernameErrorLabel.Name = "usernameErrorLabel";
+            this.usernameErrorLabel.Size = new System.Drawing.Size(24, 29);
+            this.usernameErrorLabel.TabIndex = 23;
+            this.usernameErrorLabel.Text = "*";
+            this.usernameErrorLabel.Visible = false;
+            // 
+            // PassErrorLable
+            // 
+            this.PassErrorLable.AutoSize = true;
+            this.PassErrorLable.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassErrorLable.ForeColor = System.Drawing.Color.Tomato;
+            this.PassErrorLable.Location = new System.Drawing.Point(229, 369);
+            this.PassErrorLable.Name = "PassErrorLable";
+            this.PassErrorLable.Size = new System.Drawing.Size(24, 29);
+            this.PassErrorLable.TabIndex = 24;
+            this.PassErrorLable.Text = "*";
+            this.PassErrorLable.Visible = false;
+            // 
             // Login
             // 
+            this.AcceptButton = this.Loginbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1417, 642);
@@ -124,5 +157,7 @@
         private System.Windows.Forms.TextBox passtxt;
         private System.Windows.Forms.TextBox usernametxt;
         private System.Windows.Forms.Button Loginbtn;
+        private System.Windows.Forms.Label PassErrorLable;
+        private System.Windows.Forms.Label usernameErrorLabel;
     }
 }

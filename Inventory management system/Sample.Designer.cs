@@ -130,6 +130,6 @@
         protected System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        protected System.Windows.Forms.Label label1;
     }
 }

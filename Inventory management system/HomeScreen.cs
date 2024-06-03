@@ -18,11 +18,6 @@ namespace Inventory_management_system
             InitializeComponent();
         }
 
-        private void HomeScreen_Load(object sender, EventArgs e)
-        {
-            // Your code for HomeScreen load event
-        }
-
         private void Userbtn_Click(object sender, EventArgs e)
         {
             Users u = new Users();  
@@ -38,6 +33,21 @@ namespace Inventory_management_system
         private void ProBtn_Click(object sender, EventArgs e)
         {
             products u = new products();
+            MainClass.showWindow(u, this, MDI.ActiveForm);
+        }
+
+        private void HomeScreen_Load(object sender, EventArgs e)
+        {
+
+            label1.Text = Retrieval.EMP_NAME; // Your code for HomeScreen load event
+           
+           MDI.logoutToolStripMenuItem.Enabled = true;
+
+        }
+
+        private void suppBtn_Click(object sender, EventArgs e)
+        {
+            Supplier u = new Supplier();
             MainClass.showWindow(u, this, MDI.ActiveForm);
         }
     }

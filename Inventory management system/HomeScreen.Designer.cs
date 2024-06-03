@@ -35,6 +35,7 @@
             this.ProBtn = new System.Windows.Forms.Button();
             this.Userbtn = new System.Windows.Forms.Button();
             this.catBtn = new System.Windows.Forms.Button();
+            this.suppBtn = new System.Windows.Forms.Button();
             this.LeftPanel.SuspendLayout();
             this.RightPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,6 +65,7 @@
             this.tableLayoutPanel1.Controls.Add(this.ProBtn, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Userbtn, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.catBtn, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.suppBtn, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 58);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -129,11 +131,13 @@
             this.ProBtn.FlatAppearance.BorderSize = 3;
             this.ProBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ProBtn.Image = global::Inventory_management_system.Properties.Resources.product1;
             this.ProBtn.Location = new System.Drawing.Point(218, 3);
             this.ProBtn.Name = "ProBtn";
             this.ProBtn.Size = new System.Drawing.Size(209, 107);
             this.ProBtn.TabIndex = 1;
             this.ProBtn.Text = "Products";
+            this.ProBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ProBtn.UseVisualStyleBackColor = true;
             this.ProBtn.Click += new System.EventHandler(this.ProBtn_Click);
             // 
@@ -145,11 +149,13 @@
             this.Userbtn.FlatAppearance.BorderSize = 3;
             this.Userbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Userbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Userbtn.Image = global::Inventory_management_system.Properties.Resources._22;
             this.Userbtn.Location = new System.Drawing.Point(3, 3);
             this.Userbtn.Name = "Userbtn";
             this.Userbtn.Size = new System.Drawing.Size(209, 107);
             this.Userbtn.TabIndex = 0;
             this.Userbtn.Text = "User";
+            this.Userbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Userbtn.UseVisualStyleBackColor = true;
             this.Userbtn.Click += new System.EventHandler(this.Userbtn_Click);
             // 
@@ -168,6 +174,22 @@
             this.catBtn.Text = "Categories";
             this.catBtn.UseVisualStyleBackColor = true;
             this.catBtn.Click += new System.EventHandler(this.catBtn_Click);
+            // 
+            // suppBtn
+            // 
+            this.suppBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.suppBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.suppBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.suppBtn.FlatAppearance.BorderSize = 3;
+            this.suppBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.suppBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.suppBtn.Location = new System.Drawing.Point(218, 116);
+            this.suppBtn.Name = "suppBtn";
+            this.suppBtn.Size = new System.Drawing.Size(209, 107);
+            this.suppBtn.TabIndex = 7;
+            this.suppBtn.Text = "Suppliers";
+            this.suppBtn.UseVisualStyleBackColor = true;
+            this.suppBtn.Click += new System.EventHandler(this.suppBtn_Click);
             // 
             // HomeScreen
             // 
@@ -194,5 +216,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button ProBtn;
         private System.Windows.Forms.Button catBtn;
+        private System.Windows.Forms.Button suppBtn;
     }
 }

@@ -44,5 +44,13 @@ namespace Inventory_management_system
             settings set = new settings();
             MainClass.showWindow(set, this); 
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MDI.logoutToolStripMenuItem.Enabled = false;
+            Login set = new Login();
+            MainClass.showWindow(set, this);
+            
+        }
     }
 }
